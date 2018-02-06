@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CuS-du-Nfr">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VideoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backroundGradient" translatesAutoresizingMaskIntoConstraints="NO" id="e8B-3S-x6Q">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" distribution="equalSpacing" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ATO-zQ-I5V">
+                                <rect key="frame" x="20" y="362.5" width="335" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcm-tI-oF0">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                        <state key="normal" title="Play Video"/>
+                                        <connections>
+                                            <action selector="whenButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kD1-Ql-ZtO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lr-oj-3Gr">
+                                        <rect key="frame" x="239" y="0.0" width="96" height="30"/>
+                                        <state key="normal" title="Choose Video"/>
+                                        <connections>
+                                            <action selector="chooseVideoBtnTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tHl-Uq-VxA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gIQ-vG-GW4">
+                                <rect key="frame" x="0.0" y="64" width="375" height="288.5"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d55-oy-fcL">
+                                <rect key="frame" x="141" y="500" width="70" height="35"/>
+                                <state key="normal" title="Live Stream" image="zdfLogo"/>
+                                <connections>
+                                    <action selector="liveStreamBtnTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mex-52-uj3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gs-Qd-atf">
+                                <rect key="frame" x="16" y="487" width="89" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="2Pi-t2-8YW"/>
+                                    <constraint firstAttribute="width" constant="89" id="cF4-qN-Vw8"/>
+                                </constraints>
+                                <state key="normal" title="Youtube" image="youtubeLogo">
+                                    <color key="titleColor" red="0.24215327659999999" green="0.52742683260000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="youtubeBtnTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e2i-sM-aF1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Online services :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAG-mR-P1O">
+                                <rect key="frame" x="100" y="412.5" width="175" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FoY-QP-8O1">
+                                <rect key="frame" x="250" y="500" width="109" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="109" id="K7l-dI-nDd"/>
+                                </constraints>
+                                <state key="normal" title="Live Stream" image="twitchLogo"/>
+                                <connections>
+                                    <action selector="liveStreamBtnTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mAW-WU-yKY"/>
+                                    <action selector="twitchBtnTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qf6-OD-5Pm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ATO-zQ-I5V" secondAttribute="trailing" constant="20" id="0PR-a0-w2u"/>
+                            <constraint firstItem="7gs-Qd-atf" firstAttribute="top" secondItem="zAG-mR-P1O" secondAttribute="bottom" constant="54" id="0Z5-fB-ujF"/>
+                            <constraint firstItem="ATO-zQ-I5V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1lr-0g-YLf"/>
+                            <constraint firstItem="FoY-QP-8O1" firstAttribute="top" secondItem="d55-oy-fcL" secondAttribute="top" id="3PA-ym-X2h"/>
+                            <constraint firstItem="zAG-mR-P1O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="3zR-YQ-zbe"/>
+                            <constraint firstItem="gIQ-vG-GW4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="50V-Co-sia"/>
+                            <constraint firstItem="d55-oy-fcL" firstAttribute="leading" secondItem="7gs-Qd-atf" secondAttribute="trailing" constant="36" id="7Wn-tF-8Hr"/>
+                            <constraint firstItem="FoY-QP-8O1" firstAttribute="top" secondItem="zAG-mR-P1O" secondAttribute="bottom" constant="67" id="Cx1-1o-m2y"/>
+                            <constraint firstItem="FoY-QP-8O1" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Cz0-lg-qFL"/>
+                            <constraint firstItem="zAG-mR-P1O" firstAttribute="top" secondItem="ATO-zQ-I5V" secondAttribute="bottom" constant="20" id="DOc-Rj-4AU"/>
+                            <constraint firstItem="gIQ-vG-GW4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EKC-HU-wNJ"/>
+                            <constraint firstItem="7gs-Qd-atf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="HFH-Ho-xIb"/>
+                            <constraint firstItem="7gs-Qd-atf" firstAttribute="centerY" secondItem="d55-oy-fcL" secondAttribute="centerY" id="Ikz-qe-0TJ"/>
+                            <constraint firstItem="e8B-3S-x6Q" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KcD-1Z-kfZ"/>
+                            <constraint firstItem="7gs-Qd-atf" firstAttribute="centerY" secondItem="FoY-QP-8O1" secondAttribute="centerY" id="R6Q-xU-3Tg"/>
+                            <constraint firstItem="gIQ-vG-GW4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ebx-IH-aqG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7gs-Qd-atf" secondAttribute="bottom" constant="120" id="flh-bi-Sp2"/>
+                            <constraint firstItem="e8B-3S-x6Q" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="guE-m7-Att"/>
+                            <constraint firstItem="e8B-3S-x6Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ky7-jT-Rdb"/>
+                            <constraint firstItem="ATO-zQ-I5V" firstAttribute="top" secondItem="gIQ-vG-GW4" secondAttribute="bottom" constant="10" id="nWZ-Dn-sZ3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zAG-mR-P1O" secondAttribute="trailing" constant="100" id="qxj-O2-Ipk"/>
+                            <constraint firstItem="FoY-QP-8O1" firstAttribute="leading" secondItem="d55-oy-fcL" secondAttribute="trailing" constant="39" id="rH4-KJ-o2z"/>
+                            <constraint firstItem="e8B-3S-x6Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="y4K-Qt-Qo2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Tdw-79-st2"/>
+                    <connections>
+                        <outlet property="webView" destination="gIQ-vG-GW4" id="YaY-FJ-u2U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="469.60000000000002" y="116.49175412293854"/>
+        </scene>
+        <!--Stream View Controller-->
+        <scene sceneID="puK-Kn-grn">
+            <objects>
+                <viewController storyboardIdentifier="FullScreenVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4NU-5y-7Wy" customClass="StreamViewController" customModule="VideoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JbZ-L5-kvP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9aj-Ay-otw">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9aj-Ay-otw" firstAttribute="top" secondItem="Nuc-yf-TXR" secondAttribute="top" id="0dW-ZS-4Sf"/>
+                            <constraint firstItem="9aj-Ay-otw" firstAttribute="bottom" secondItem="Nuc-yf-TXR" secondAttribute="bottom" id="Hck-j5-Usu"/>
+                            <constraint firstItem="9aj-Ay-otw" firstAttribute="leading" secondItem="Nuc-yf-TXR" secondAttribute="leading" id="QXw-KO-5RI"/>
+                            <constraint firstItem="9aj-Ay-otw" firstAttribute="trailing" secondItem="Nuc-yf-TXR" secondAttribute="trailing" id="kNJ-Up-hhA"/>
+                            <constraint firstAttribute="bottom" secondItem="9aj-Ay-otw" secondAttribute="bottom" id="sfK-vc-CjB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Nuc-yf-TXR"/>
+                    </view>
+                    <connections>
+                        <outlet property="streamWebView" destination="9aj-Ay-otw" id="NEr-fq-dwS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qB7-Vs-Z6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1135" y="116"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="35r-2H-tAv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CuS-du-Nfr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Com-76-qSy">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Sdx-MC-a8U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cdr-SZ-QAL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-191" y="116"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backroundGradient" width="1920" height="1080"/>
+        <image name="twitchLogo" width="530" height="135"/>
+        <image name="youtubeLogo" width="773" height="481"/>
+        <image name="zdfLogo" width="800" height="479"/>
+    </resources>
+</document>
